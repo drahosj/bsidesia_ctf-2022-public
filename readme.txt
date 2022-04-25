@@ -1,3 +1,12 @@
+= Public CTF Release
+
+This repository has the sources for (most) CTF challenges.
+Many include a readme.txt explaining the challenge, but the
+original source code and/or Makefile should also help see
+what's going on.
+
+== Original Readme
+
 Directory format (to make importing super easy)
 
 /
