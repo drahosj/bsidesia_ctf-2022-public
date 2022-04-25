@@ -1,0 +1,11 @@
+name,points,regex,visible
+Filebox,1000,DUMMYFLAG,true
+Filebox NFS,150,SecDSM{be_a_warrior},false
+Filebox HTML Comment,50,SecDSM{nothing_will_burn_us_out},false
+Filebox HTML Title,150,SecDSM{de_la_capǎt},false
+Filebox TFTP,250,SecDSM{life_on_the_dark_side},false
+Filebox FTP,100,SecDSM{when_you_look_at_me},false
+Filebox 9p,200,SecDSM{take_a_shot},false
+Filebox NFS Hidden,25,SecDSM{tick_tock_take_you_dancing},false
+Filebox Robots.txt,50,SecDSM{parlez_de_moi},false
+Filebox HTTP Header,150,SecDSM{never_gives_a_damn},false

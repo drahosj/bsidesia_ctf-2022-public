@@ -1,0 +1,14 @@
+CREATE DATABASE IF NOT EXISTS keycloak;
+
+CREATE DATABASE IF NOT EXISTS flag;
+CREATE USER IF NOT EXISTS keycloak;
+
+GRANT ALL PRIVILEGES on keycloak.* to 'keycloak'@'%' IDENTIFIED BY 'hGGxAQpdBQxLFCzcjJb4VQd8LF';
+
+CREATE TABLE flag.flag (
+     id MEDIUMINT NOT NULL AUTO_INCREMENT,
+     flag CHAR(45) NOT NULL,
+     PRIMARY KEY (id)
+ );
+INSERT INTO flag.flag (flag) VALUES ('SecDSM{8f6828da-2c8e-48f7-aae6-83f02ab7da3f}');
+

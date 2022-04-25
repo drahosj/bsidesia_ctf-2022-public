@@ -1,0 +1,3 @@
+flag,points,regexp,visible
+Free Points!,10,SecDSM{free_points},true
+More free points!,15,SecDSM{more_free_points},false

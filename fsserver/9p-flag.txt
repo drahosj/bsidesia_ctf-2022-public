@@ -1,0 +1,1 @@
+SecDSM{take_a_shot}

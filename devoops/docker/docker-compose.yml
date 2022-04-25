@@ -1,0 +1,124 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  httpd:
+    image: httpd:2.4.49
+    ports:
+      - 80:80
+    networks:
+      - frontend
+      - backend
+    volumes:
+      - ./httpd/httpd.conf:/usr/local/apache2/conf/httpd.conf
+      - ./httpd/conf/sites-enabled/:/usr/local/apache2/conf/sites-enabled/
+      - ./httpd/flag.txt:/flag.txt
+  mariadb:
+    image: mariadb:10.2
+    networks:
+      - db
+    volumes:
+      - ./mariadb/1_init.sql:/docker-entrypoint-initdb.d/1_init.sql
+      - ./mariadb/data:/var/lib/mysql
+    environment:
+      - MARIADB_ROOT_PASSWORD=QyNb5fipox7TUbbCkm76G2upzS7orHiy
+    healthcheck:
+      test: "/usr/bin/mysql --user=root --password=QyNb5fipox7TUbbCkm76G2upzS7orHiy --execute \"SHOW DATABASES;\""
+      interval: 3s
+      timeout: 1s
+      retries: 5
+  keycloak:
+    image: quay.io/keycloak/keycloak:17.0.0
+    environment:
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=rsYqV^AggeQVkCCJ4RLGPS26Rtu4rbpT
+      - KC_DB=mariadb
+      - KC_DB_URL_HOST=mariadb
+      - KC_DB_URL_DATABASE=keycloak
+      - KC_DB_USERNAME=keycloak
+      - KC_DB_PASSWORD=hGGxAQpdBQxLFCzcjJb4VQd8LF
+      - KC_HOSTNAME=sso.secdsmctf.io
+    networks:
+      - db
+      - backend
+    command: start-dev --metrics-enabled=true
+    volumes:
+      - ./keycloak/flag.txt:/flag.txt
+    depends_on:
+      mariadb:
+        condition: service_healthy
+    healthcheck:
+      test: "curl --fail localhost:8080/health"
+      interval: 3s
+      timeout: 1s
+      retries: 5
+  gitlab:
+    image: gitlab/gitlab-ce:14.9.1-ce.0
+    networks:
+      - backend
+    volumes:
+      - ./gitlab/config:/etc/gitlab
+      - ./gitlab/logs:/var/log/gitlab
+      - ./gitlab/data:/var/opt/gitlab
+      - ./gitlab/flag.txt:/flag.txt
+    depends_on:
+      keycloak:
+        condition: service_healthy
+    environment:
+      - root_password='ewM2s50DM9VDwrP//w6OpAlHPVl0nsEbAjceOAoN3Z0='f
+  jenkins:
+    image: jenkins/jenkins:2.153
+    networks:
+      - backend
+    volumes:
+      - ./jenkins/flag.txt:/flag.txt
+      - ./jenkins/data:/var/jenkins_home
+      - ./jenkins/vuln_plugins/workflow-cps.jpi:/var/jenkins_home/plugins/workflow-cps.jpi
+      - ./jenkins/vuln_plugins/workflow-cps:/var/jenkins_home/plugins/workflow-cps
+      - ./jenkins/vuln_plugins/script-security.jpi:/var/jenkins_home/plugins/script-security.jpi
+      - ./jenkins/vuln_plugins/script-security:/var/jenkins_home/plugins/script-security
+      - ./jenkins/vuln_plugins/pipeline-rest-api.jpi:/var/jenkins_home/plugins/pipeline-rest-api.jpi
+      - ./jenkins/vuln_plugins/pipeline-rest-api:/var/jenkins_home/plugins/pipeline-rest-api
+      - ./jenkins/vuln_plugins/pipeline-model-declarative-agent.jpi:/var/jenkins_home/plugins/pipeline-model-declarative-agent.jpi
+      - ./jenkins/vuln_plugins/pipeline-model-declarative-agent:/var/jenkins_home/plugins/pipeline-model-declarative-agent
+  confluence:
+    image: atlassian/confluence-server:7.4.10
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - backend
+      - db
+    volumes:
+      - ./confluence/data/:/var/atlassian/application-data/confluence
+      - ./confluence/flag.txt:/flag.txt
+    environment:
+      ATL_JDBC_URL: jdbc:postgresql://postgres:5432/confluence
+      ATL_JDBC_USER: confluence
+      ATL_JDBC_PASSWORD: UVaE5EUG9YgLAZQaA665DFEfjAJyoNNF
+      ATL_DB_TYPE: postgresql
+      ATL_DB_DRIVER: org.postgresql.Driver
+      ATL_DB_SCHEMA_NAME: public
+      ATL_PROXY_NAME: docs.secdsmctf.io
+      ATL_TOMCAT_SCHEME: http
+      ATL_PROXY_PORT: 80
+  postgres:
+    image: postgres:12.8
+    environment:
+      - POSTGRES_USER=postgress
+      - POSTGRES_PASSWORD=dSw9RiPuKnD8ZWKRxHj4Wq3cgBU9Lbt6
+    networks:
+      - db
+    volumes:
+      - ./postgres/data/:/var/lib/postgresql/data/
+      - ./postgres/1_init.sh:/docker-entrypoint-initdb.d/1_init.sh
+    healthcheck:
+      test: curl -s https://localhost:5432 >/dev/null; if [[ $$? == 52 ]]; then echo 0; else echo 1; fi
+      interval: 30s
+      timeout: 10s
+      retries: 5
+networks:
+  frontend:
+    name: frontend
+  backend:
+    name: backend
+  db:
+    name: db

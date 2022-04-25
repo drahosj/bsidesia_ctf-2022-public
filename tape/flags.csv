@@ -1,0 +1,4 @@
+name,points,regex,visible
+Tape1,200,SecDSM{show_me_your_love},true
+C64,250,SecDSM{the_heat_is_getting_higher},true
+Metadata,200,SecDSM{hi_baby_here_i_am},false

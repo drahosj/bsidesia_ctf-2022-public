@@ -1,0 +1,14 @@
+name,points,regexp,visible
+confluence_root,200,SecDSM{a07be5de-daa8-4664-90b0-f95616faf67a},true
+gitlab_root,200,SecDSM{00047e92-6a7e-44cf-8dee-a4ad8cc63531},true
+apache_root,150,SecDSM{fc8c9896-7f1a-453f-bfca-48a9010a5bf8},true
+jenkins_root,300,SecDSM{a54a42a6-e2bd-46ec-969c-ea8f5741dc62},true
+keycloak_root,300,SecDSM{54b5d1d5-7ea7-4d7b-8ac3-ed542729c1b7},false
+mariadb_db,200,SecDSM{8f6828da-2c8e-48f7-aae6-83f02ab7da3f},true
+postgres_db,200,SecDSM{a2dffc04-2621-4e0d-8192-0e115ffb142d},true
+httpd_default_header,50,SecDSM{1bc3fdd0-dd5b-4c0e-b864-112ea10f403b},false
+httpd_gitlab_header,50,SecDSM{8162daa2-c1db-4322-8a17-ee3e41a85af4},false
+httpd_sso_header,50,SecDSM{9029a3c5-96c9-45cd-9b77-72df48a030f7},false
+httpd_docs_header,50,SecDSM{8f6828da-2c8e-48f7-aae6-83f02ab7da3f},false
+httpd_jenkins_header,50,SecDSM{bbac5998-3102-4080-af68-7a061832ef36},false
+drahosj-gitlab,150,SecDSM{5b74eb06-1402-448f-90eb-2498102d95f3},true

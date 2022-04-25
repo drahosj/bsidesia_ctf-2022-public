@@ -1,0 +1,9 @@
+#! /usr/bin/env ruby
+
+puts '<hex xmlns="http://drahos.me/hex">'
+ARGF.read().each_char do |c|
+  next unless c =~ /[0-9a-f]/
+  puts "  <digit d=\"#{c.to_i(16)}\"/>"
+end
+puts '</hex>'
+

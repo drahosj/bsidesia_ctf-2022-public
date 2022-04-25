@@ -1,0 +1,2 @@
+name,points,regexp,visible
+Floppy ASK,50,SecDSM{you_put_them_together},true

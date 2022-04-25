@@ -1,0 +1,49 @@
+Scavenger Hunt:
+
+Challenges will fall under 2 catagories. You will either prove you have completed a task or bring us an item.
+
+If an item is brought to us we will return it when we are done admiring it. We will not keep anything so bring your best.
+
+All flags are at the discretion of the judges.
+
+Brown Bottle Bribes (bribes will be accepted for flags)
+
+1: Unrack a running server
+2: Bring me a working hub.
+3: Find an unlocked device that you shouldn't have access to.
+4: Show me the most archaic website you know of. (Show me some CVEs related to it)
+5: Show me a real phishing site.
+6: Call a scammer.
+7: Get someone famous to retweet you. (tweet must contain #bsidesIA)
+8: Demonstrate your computer password uses more than 64 characters.
+9: Hack your own car.
+10: Demonstrate unconventional mfa usage.
+11: Bring me the most obscure cable in your cable junk box.
+12: Show me a tech meme that makes me laugh.
+13: Bring me something 3d printed.
+14: Let me drive your "cool" car through the parking lot. (Bonus if it's EV or modified)
+15: Bring me a stick of ddr1 memory.
+16: Take a picture of the pool on the roof.
+17: What is your favorite IDS engine. Be prepared to defend your reason. There is a wrong answer.
+18: Bring me your thickest cybersec book.
+19: Show me how you're smuggling beverages.
+20: Show me your most innefficient hello world.
+21: Crack this hash: 272040DC6223AB1D17CA1EE4BB9FFA15
+22: Show me an example of crc32 hash collision and prove it.
+23: Show me an example of md5 hash collision and prove it.
+24: What is Nick Starke's go to foot wear?
+25: Bring some veteran SecDSM swag.
+26: Make your own SecDSM swag.
+27: Decode this: F(/TsDIjs
+28: Bring me a bowling pin.
+29: Bring a slide projector.
+30: Bring me a parking meter.
+31: Decode TPMS.
+32: Decode POCSAG.
+33: Use ADS-B to track a plane.
+34: Get arden to drink and swallow a shot of alcohol.
+35: Bring me a slice of caseys pizza.
+36: Bring me the most complex working adapter.
+37: What is the command ID in Nick Starke's presentation.
+38: Beg for a point
+39: Join the SecDSM Discord.

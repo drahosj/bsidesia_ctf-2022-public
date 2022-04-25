@@ -1,0 +1,6 @@
+name,points,flag,visible
+STR,100,SecDSM{take_a_video},true
+RET,250,SecDSM{watch_it_slo_mo},true
+Hidden,25,SecDSM{sacando_un_pecho_fuera_al_puro_estilo_delacroix},false
+Hidden,25,SecDSM{no_sé_por_qué_dan_tanto_miedo_nuestras_tetas},false
+Tryhard,750,SecDSM{not_even_sure_that_was_possible},false

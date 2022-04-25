@@ -1,0 +1,20 @@
+  ___               ___
+ (o o)             (o o)
+(  V  ) Dev Oops! (  V  )
+--m-m---------------m-m--
+
+Hack the Things, Find The Flags
+
+
+Welcome to Dev Oops!
+
+We store all the docs on this website
+    http://docs.secdsmctf.io
+
+ Do Things with Jenkins!
+    http://jenkins.secdsmctf.io
+
+Check out the UnCTFd Platform and other repo from our main dev!
+   http://gitlab.secdsmctf.io/drahosj/
+
+    There are several repos here, lots of helpful scripts!

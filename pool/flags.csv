@@ -1,0 +1,3 @@
+name,points,regex,visible
+Winner,200,SecDSM{are_you_the_winners},true
+Loser,25,SecDSM{vote_for_the_winners},false

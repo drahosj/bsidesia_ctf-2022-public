@@ -1,0 +1,3 @@
+name,points,regex,visible
+Reverse,150,SecDSM{my_number_one},true
+Annoying,200,SecDSM{you_are_the_one},true

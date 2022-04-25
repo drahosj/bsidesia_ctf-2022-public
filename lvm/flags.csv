@@ -1,0 +1,3 @@
+name,points,regex,visible
+LVWhat?,200,SecDSM{heroes_of_our_time},true
+Hidden,50,SecDSM{still_in_love},false

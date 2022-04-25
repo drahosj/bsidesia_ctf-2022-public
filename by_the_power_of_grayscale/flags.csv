@@ -1,0 +1,13 @@
+name,points,regex,visible
+By the Power of Grayscale,775,DUMMYFLAG,true
+Grayscale 1,50,SecDSM{bpg0_U2VjRFNN},false
+Grayscale 2,25,SecDSM{bpg1_e2JwZzJf},false
+Grayscale 3,50,SecDSM{bpg3_Y29uZ3Jh},false
+Grayscale 4,50,SecDSM{bpg4_dHVsYXRp},false
+Grayscale 5,75,SecDSM{bpg5_b25zX21l},false
+Grayscale 6,50,SecDSM{bpg6_dGFfZmxh},false
+Grayscale 7,75,SecDSM{bpg7_Z3NfYXJl},false
+Grayscale 8,50,SecDSM{bpg8_X3NvX2hv},false
+Grayscale 9,200,SecDSM{bpg9_dF9yaWdo},false
+Grayscale 10,150,SecDSM{bpg10_dF9ub3d9},false
+Grayscale BONUS,250,SecDSM{bpg2_congratulations_meta_flags_are_so_hot_right_now},false

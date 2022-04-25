@@ -1,0 +1,4 @@
+name,points,flag,visible
+Fuego,250,SecDSM{yeah_yeah_fire},true
+Fire,50,SecDSM{alternative_init},false
+Inferno,150,SecDSM{and_alternative_secrets},false

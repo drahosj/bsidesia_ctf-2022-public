@@ -1,0 +1,3 @@
+Reverse engineer the attached binary to find
+an exploit, and then try it against the online
+instance!
